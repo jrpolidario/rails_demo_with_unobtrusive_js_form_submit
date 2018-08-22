@@ -1,0 +1,5 @@
+<% if @post.valid? %>
+  window.location = "<%= j post_url(@post) %>";
+<% else %>
+  $('#post_form').html("<%= j render('form', post: @post) %>")
+<% end %>
